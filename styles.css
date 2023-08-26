@@ -213,7 +213,7 @@ footer p{
     position: relative;
     top:-30%;
 }
-@media(min-width: 385px) and (max-width: 1080px) {
+@media(min-width: 385px) and (width: 1080px) {
     /* Your CSS rules for screens with width 320px or less */
     body{
         height:100vh;
