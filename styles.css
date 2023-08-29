@@ -1,109 +1,93 @@
-body{
-  background-color:white;
-  height:100vh;
-  width:100vw;
+
+* {
+  box-sizing: border-box;
   margin:0;
   padding:0;
-  font-size:15px;
+}
+html{
+  width:100vw;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight:100;
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
   overflow-x: hidden;
 }
+#header-img{
+  height:50px;
+  width:50px;
+  display: block;
+  margin:10px;
+  align-items: center;
+  justify-content: flex-start;
+  /*border: 5px solid red;*/
+}
 header{
- position:fixed;
- top:0;
-  display:flex;
-  flex-direction:column;
-  justify-content:space-between;
-  background-color:#F2B90C;
-  height:20%;
+  background: rgb(242, 162, 13);
+  height: 7rem;
+  width: 99vw;
   padding:0;
   margin:0;
-  z-index: 4;
-  width: 100%;
-}
-nav{
-  
-   width:100%;
-   top:0;
-   left:0;
-  margin:50
-}
-li{
-  text-decoration:none;
-  color:black;
-}
-
-ul{
-  display:flex;
- list-style:none;
-  color:black;
-  margin-top:-90;
-  margin-right:-20px;;
-  padding-right: -20px;
+  border: 5px solid #f2a20d;
+  display: flex;
   justify-content:space-between;
-  position: absolute;
-  left: 10%;
-  right:0;
-  max-width: 80%;
-}
-#details{
- position: relative;
-
-}
-.down{
-    position: relative;
-    top:10;
+  align-items: center;
+  position: fixed;
+  z-index: 5;
 }
 
-.nav-link{
-  margin:0 20px;
-  color:black;
+.nav li{
+  text-decoration: none;
+  list-style: none;
+  display: inline-flex;
+  padding:10px;
 }
-#header-img{
-  height:60px;
-  width:10%;
-  display:flex;
-  margin-top:25px;
-  padding-left:2%;
+.nav li a{
+ transition:all 0.3s ease 0s;
+ text-decoration: none;
+ color:#333333;
 }
-figure{
+.nav li a:hover{
+  color: #1a4a73;
+}
+button{
+  background-color: #333333;
+  color:white;
+  padding: 5;
+  margin: 10;
+}
+#my-image{
+  width:99%;
+  height:85%;
+  padding: 0;
+  margin-top:7rem;
+  position: relative;
+}
+#img-wall{
   position:relative;
   max-width:100%;
   height:90%;
   padding:0;
   margin:0;
-  
 }
-figure img{
-  display:flex;
-  padding:0;
-  margin:0;
-  max-width:100%;
-  border-color:black;
-  margin-bottom:0;
+.img-cap{
+color:rgb(242, 162, 13);
+position: absolute;
+text-align: center;
+top:75%;
+background-color: rgba(00, 00, 00, 0.5);
+left: 0%;
+right: 0%;
+/*border: 1px solid red;*/
+padding:10;
 }
-.fig-img{
-    position: sticky;
-    top:50%;
-}
-.img-wall{
-    height:80%;
-}
-figure figcaption{
-  position:absolute;
-  top:55%;
-  left:35%;
-  background:rgba(0, 0, 0, 0.8);
-  color:white;
-  font-size:16px;
-  font-weight:800;
-}
-
 h3{
-  background-color:#F2A30F;
-  margin-top:0;
+  width:100%;
+  background-color:rgb(242, 162, 13) ;
+  padding-left: 25px;
 }
-.white{
-    background-color: white;
+.short{
+ animation: fade 10s infinite alternate;
 }
 form{
   background-color:#F2F2F2;
@@ -117,178 +101,102 @@ form label input{
   display:block;
   margin:50;
   border:2px solid #F2A30F;
+  border-color: #F2A30F;
+}
+form label input:hover{
+  border-color: #F2A30F;
 }
 input[type="submit"]{
   background-color:#F2A30F;
 }
-.short{
-  background:#262626;
-  color:#F2A30F;
-  padding:20;
-  margin:0;
-  margin-top:-20;
-  font-weight:500;
-}
 iframe{
+  margin:50;
   display:block;
-  width:99%;
-}
-.how{
-  background-color:#BF8756;
-  margin:0;
-  padding:0;
-  width:100%;
-  justify-content:center;
+  align-items: center;
 }
 .services, .price{
   display:flex;
-  justify-content:space-evenly;
-  align-items:center;
-  border:1px solid white;
+  flex-wrap: wrap;
+  margin:10;
+  align-content: space-between;
 }
-.services{
-  display:flex;
-  justify-content:space-evenly;
-  margin:10
-}
-.AA{
-  flex:1;
-  padding:20px;
-
+.AA, .table{
   text-align:center;
+  position: relative;
+  display: inline-block;
+  padding: 10;
+  align-items: center;
+  flex-basis:auto;
+}
+.display, .price-t{
+  position:relative;
+  width: 25em;
+  max-width: 100%;
+  flex-shrink: 0;
+  display: block;
 }
 .content{
-  position:relative;
-  top: 300px;
-  left:0;
-  bottom: 180px;
-width:400px;
-  color:white;
-  z-index: 2;
-  border: 1px solid red;
+  font-size: 15px;
+  position:absolute;
+  top: 30%;
+  left:10%;
+  flex: 1;
+  word-wrap: break-word;
+  max-width: calc(100% - 220px);
+  color: aliceblue;
+  background-color: rgba(00, 00, 00, 0.5);
 }
-section div{
-  border:1px solid black;
-  height:150px;
+h4{
+  background-color: #F2A30F;
   width:100%;
-  padding:10;
-}
-section div h4{
-  background:#262626;
-  color:white;
-  text-align:center;
-  font-size:15px;
 }
 #contact{
-  padding-top:10px;
-
+  height:10rem;
 }
-section h3, section p{
-  padding-left:20px;
-  font-weight:800;
+p{
+  padding: 15px;
 }
 footer{
-  height:100px;
-  background-color:#BF8756;
-  text-align:end;
-  margin:0;
-position:relative;
-padding:0;
+  height:15rem;
+  background-color: #4B0082;
+  color:white;
+  text-align: right;
 }
-footer p{
-  margin:10;
-  position:relative;
-  bottom:20;
-  top:50%;
+footer a{
+  color:white;
 
+  cursor:pointer;
 }
 .last_link{
-  position:relative;
-  margin:10;
-  top:50%;
-  text-decoration:none;
-  color:white;
-}
-.content{
-    position: relative;
-    top:-30%;
-}
-@media(min-width: 385px) and (width: 1080px) {
-    /* Your CSS rules for screens with width 320px or less */
-    body{
-        height:100vh;
-    }
-    header{
-       
-        height:15vh;
-    }
-    #my-image{
-        display: block;
-        position:relative;
-        height:100vh;
- 
-    }
-    .img-cap{
-        display: block;
-        position: relative;
-        top:-280px;
-        left:5px;
-        right:5px;
-        text-align: center;
-    }
-  
-    .content{
-        position: relative;
-        font-size: 15px;
-        align-items: center;
-    }
-    .services{
-        display: flex;
-        justify-content: flex-start;
-        flex:column;
-        flex-wrap: wrap;
-    }
-    .AA{
-        padding: 10px;
-        margin: 5px;
-    }
-    figure h3{
-        width: 75%;
-        align-items: center;
-    }
-  .display{
-        width: 80%;
-        align-items: center;
-    }
-    .price{
-        
-        display: flex;
-        justify-content: flex-start;
-        flex-wrap: nowrap;
-        width: 100%;
-    }
-    .table{
-        flex:1  1;
-    }
-    .head{
-
-        position: relative;
-        bottom:20;
-        font-size: 12px;
-    }
-    .price-t{
-        position: relative;
-        bottom: 10;
-        font-size: 12px;
-   
-    }
-    .long{
-        bottom:25;
-        font-size: 11.5;
-    }
-    div h4{
-        font-size: 20px;
-    }
+  padding-right:80px;
+  text-align: end;
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes fade {
+  0% {
+    opacity: 0; /* Text is invisible at the beginning */
+  }
+  100% {
+    opacity: 1; /* Text is fully visible at the end */
+  }
+}
